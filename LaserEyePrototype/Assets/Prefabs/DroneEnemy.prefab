@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 6950217919184257519}
   - component: {fileID: 4102243824289247979}
   - component: {fileID: 5326438359558977692}
+  - component: {fileID: 3961286017238453438}
   m_Layer: 0
   m_Name: DroneEnemy
   m_TagString: Target
@@ -286,7 +287,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8782275410906695304}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f16d2cc1c7e0be42a65b948ee4f014a, type: 3}
   m_Name: 
@@ -318,6 +319,22 @@ CapsuleCollider:
   m_Height: 1.26
   m_Direction: 1
   m_Center: {x: 1.6714607e-17, y: 0.61, z: 0}
+--- !u!114 &3961286017238453438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8782275410906695304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a3aec764a965643b4b092ca26720f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  minDistance: 2
+  maxDistance: 3
+  movementSpeed: 1
 --- !u!1001 &5862620017042531714
 PrefabInstance:
   m_ObjectHideFlags: 0
