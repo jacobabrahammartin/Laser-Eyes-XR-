@@ -69,10 +69,10 @@ crashlytics-build.properties
 .vs/
 
 # Jetbrains Rider cache directory
-.idea/
+/.idea/
 
 # Visual Studio Code cache directory
-.vscode/
+/.vscode/
 
 # Gradle cache directory
 .gradle/
