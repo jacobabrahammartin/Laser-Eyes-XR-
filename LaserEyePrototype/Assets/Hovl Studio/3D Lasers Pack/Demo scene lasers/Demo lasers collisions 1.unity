@@ -7066,6 +7066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af44eb64ff318b42a219a7abd31ff20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioClip: {fileID: 0}
   FirePoint: {fileID: 1032950270}
   Cam: {fileID: 337736213}
   MaxLength: 40
@@ -7382,6 +7383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af44eb64ff318b42a219a7abd31ff20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioClip: {fileID: 0}
   FirePoint: {fileID: 1076884208}
   Cam: {fileID: 337736213}
   MaxLength: 40
@@ -9193,7 +9195,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1180950963}
-  - {fileID: 1995657053}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1303862925
@@ -12997,16 +12998,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995657052}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 1.257, z: 2.81}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 978878725}
   - {fileID: 1455275297}
   - {fileID: 813737509}
   - {fileID: 704853000}
-  m_Father: {fileID: 1303862924}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1998695661
 GameObject:
@@ -13257,6 +13258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af44eb64ff318b42a219a7abd31ff20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AudioClip: {fileID: 0}
   FirePoint: {fileID: 1076884208}
   Cam: {fileID: 337736213}
   MaxLength: 40
@@ -14389,5 +14391,6 @@ SceneRoots:
   - {fileID: 1958247635}
   - {fileID: 2070696576}
   - {fileID: 1303862924}
+  - {fileID: 1995657053}
   - {fileID: 787919885}
   - {fileID: 1358667784}

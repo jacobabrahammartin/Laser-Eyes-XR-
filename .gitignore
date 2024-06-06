@@ -68,6 +68,12 @@ crashlytics-build.properties
 # Visual Studio cache directory
 .vs/
 
+# Jetbrains Rider cache directory
+/.idea/
+
+# Visual Studio Code cache directory
+/.vscode/
+
 # Gradle cache directory
 .gradle/
 
@@ -156,3 +162,7 @@ _ReSharper*/
 
 #Subversion files
 .svn 
+LaserEyePrototype/Assets/Oculus/OculusProjectConfig.asset
+LaserEyePrototype/ProjectSettings/ShaderGraphSettings.asset
+LaserEyePrototype/UserSettings/EditorUserSettings.asset
+LaserEyePrototype/UserSettings/Layouts/default-2022.dwlt
