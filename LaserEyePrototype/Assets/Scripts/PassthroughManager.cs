@@ -6,33 +6,57 @@ public class PassthroughManager : MonoBehaviour
 {
     [SerializeField] private OVRPassthroughLayer passthroughLayer1; // Default layer OnGameStarted
     [SerializeField] private OVRPassthroughLayer passthroughLayer2; // Alternate layer OnGameOver
+    [SerializeField] private OVRPassthroughLayer passthroughLayer3; // Alternate layer OnPowerUp
 
-    private bool isLayer1Active = true;
+    private OVRPassthroughLayer[] passthroughLayers;
+
+    void Start()
+    {
+        // Initialize the array of passthrough layers
+        passthroughLayers = new OVRPassthroughLayer[] { passthroughLayer1, passthroughLayer2, passthroughLayer3 };
+        // Ensure only the first layer is enabled initially
+        SetActiveLayer(0);
+    }
 
     void Update()
     {
-        // Use unity events to toggle layers on GameOver and GameStarted
+        // Example usage: cycle through layers on button press
         if (OVRInput.GetDown(OVRInput.Button.One))
         {
-            ToggleEnableDisableLayer();
+            // Cycle through layers as an example
+            int nextLayerIndex = (GetActiveLayerIndex() + 1) % passthroughLayers.Length;
+            SetActiveLayer(nextLayerIndex);
         }
     }
 
-    private void ToggleEnableDisableLayer()
+    // Method to set the active layer based on index
+    public void SetActiveLayer(int layerIndex)
     {
-        // Disable the currently active layer and enable the other one
-        if (isLayer1Active)
+        if (layerIndex < 0 || layerIndex >= passthroughLayers.Length)
         {
-            passthroughLayer1.enabled = false;
-            passthroughLayer2.enabled = true;
-        }
-        else
-        {
-            passthroughLayer1.enabled = true;
-            passthroughLayer2.enabled = false;
+            Debug.LogError("Invalid layer index");
+            return;
         }
 
-        // Update the active layer flag
-        isLayer1Active = !isLayer1Active;
+        // Enable the specified layer and disable all others
+        for (int i = 0; i < passthroughLayers.Length; i++)
+        {
+            passthroughLayers[i].enabled = (i == layerIndex);
+        }
+    }
+
+    // Method to get the current active layer index
+    private int GetActiveLayerIndex()
+    {
+        for (int i = 0; i < passthroughLayers.Length; i++)
+        {
+            if (passthroughLayers[i].enabled)
+            {
+                return i;
+            }
+        }
+
+        // Return -1 if no layer is active (should not happen)
+        return -1;
     }
 }
